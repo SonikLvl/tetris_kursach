@@ -1,0 +1,83 @@
+using UnityEngine;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor;
+
+public class GhostScript : MonoBehaviour
+{
+    public static int height = 20;
+    public static int width = 10;
+    private static Transform[,] gridGhost = new Transform[width, height];
+    private List<Transform> ghostList = new List<Transform>();
+
+    void Start()
+    {
+        // Заповнення ghostList
+        foreach (Transform children in transform)
+        {
+            int roundedX = Mathf.RoundToInt(children.transform.position.x);
+            int roundedY = Mathf.RoundToInt(children.transform.position.y);
+
+            if (roundedX >= 0 && roundedX < width && roundedY >= 0 && roundedY < height)
+            {
+                gridGhost[roundedX, roundedY] = children;
+                ghostList.Add(children);
+                Debug.Log($"Ghost {children.name} має координати: ({roundedX}, {roundedY})");
+            }
+            else
+            {
+                Debug.LogWarning($"Ghost {children.name} має невірні координати: ({roundedX}, {roundedY})");
+            }
+        }
+        Debug.Log($"Загальна кількість ghost об'єктів: {ghostList.Count}");
+    }
+
+    void Update()
+    {
+        TetrisBlock tetrisBlock = FindObjectOfType<TetrisBlock>();
+
+        if (tetrisBlock != null)
+        {
+            List<Transform> blocktList = tetrisBlock.blocktList;
+
+            if (blocktList == null || blocktList.Count == 0)
+            {
+                return;
+            }
+
+            bool allMatch = true;
+            foreach (var block in blocktList)
+            {
+                bool match = false;
+                foreach (var ghost in ghostList)
+                {
+                    if (Vector3.Distance(block.position, ghost.position) < 0.1f)
+                    {
+                        match = true;
+                        break;
+                    }
+                }
+                if (!match)
+                {
+                    allMatch = false;
+                    break;
+                }
+            }
+
+            if (allMatch)
+            {
+                Debug.Log("blocktList є підмножиною ghostList (за координатами).");
+                return;
+            }
+            else
+            {
+                Debug.Log("blocktList НЕ є підмножиною ghostList.");
+                return;
+            }
+        }
+        else
+        {
+            Debug.LogWarning("TetrisBlock не знайдено.");
+        }
+    }
+}
