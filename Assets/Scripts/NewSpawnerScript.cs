@@ -1,93 +1,41 @@
 using UnityEngine;
 
-using UnityEngine;
-using System.Collections.Generic;
 
 public class NewSpawnerScript : MonoBehaviour
 {
-    public GameObject[] Tetrominoes;
-    private GameObject PreviewTetromino;
-    private GameObject nextTetrominoPrefab;
-
-    private List<GameObject> spawnQueue = new List<GameObject>();
-    private int currentIndex = 0;
+    public GameObject[] objectsToClone; // Масив об'єктів, які потрібно клонувати
 
     void Start()
     {
-        ShuffleTetrominoes();
-        nextTetrominoPrefab = spawnQueue[currentIndex++];
-        NewTetromino();
-        Preview();
+        CloneObjects();
     }
 
-    private void ShuffleTetrominoes()
+    void CloneObjects()
     {
-        spawnQueue.Clear();
-        spawnQueue.AddRange(Tetrominoes);
-        for (int i = 0; i < spawnQueue.Count; i++)
+        if (objectsToClone == null || objectsToClone.Length == 0)
         {
-            int randomIndex = Random.Range(i, spawnQueue.Count);
-            (spawnQueue[i], spawnQueue[randomIndex]) = (spawnQueue[randomIndex], spawnQueue[i]);
-        }
-        currentIndex = 0;
-    }
-
-    public void Preview()
-    {
-        if (PreviewTetromino != null)
-        {
-            Destroy(PreviewTetromino);
+            Debug.LogWarning("Масив об'єктів для клонування порожній.");
+            return;
         }
 
-        if (currentIndex >= spawnQueue.Count)
+        // Проходимо по масиву об'єктів один раз
+        for (int i = 0; i < objectsToClone.Length; i++)
         {
-            ShuffleTetrominoes();
-        }
-
-        nextTetrominoPrefab = spawnQueue[currentIndex++];
-
-        Vector3 previewPosition = nextTetrominoPrefab.name switch
-        {
-            "Square block" => new Vector3(14.5f, 17, 0),
-            "l block" => new Vector3(15.5f, 16.5f, 0),
-            "L_rotate block" => new Vector3(15, 17, 0),
-            _ => new Vector3(15, 16, 0),
-        };
-
-        PreviewTetromino = Instantiate(nextTetrominoPrefab, previewPosition, Quaternion.identity);
-
-        foreach (MonoBehaviour script in PreviewTetromino.GetComponents<MonoBehaviour>())
-        {
-            script.enabled = false;
-        }
-    }
-
-    public void NewTetromino()
-    {
-        if (nextTetrominoPrefab != null)
-        {
-            GameObject newTetromino = Instantiate(nextTetrominoPrefab, transform.position, Quaternion.identity);
-
-            foreach (MonoBehaviour script in newTetromino.GetComponents<MonoBehaviour>())
+            if (objectsToClone[i] != null)
             {
-                script.enabled = true;
+                // Клонуємо об'єкт
+                GameObject clonedObject = Instantiate(objectsToClone[i]);
+
+                // Можна змінити позицію клонованого об'єкта, якщо потрібно
+                clonedObject.transform.position = objectsToClone[i].transform.position + new Vector3(2, 0, 0); // Наприклад, зміщуємо на 2 одиниці по осі X
+
+                // Можна також змінити ім'я клонованого об'єкта, щоб було зрозуміло, що це клон
+                clonedObject.name = objectsToClone[i].name + "_Clone";
             }
-
-            TetrisBlock tetrisBlock = newTetromino.GetComponent<TetrisBlock>();
-
-            if (!tetrisBlock.ValidMove())
+            else
             {
-                GameOver();
-                return;
+                Debug.LogWarning("Один з об'єктів у масиві для клонування є null.");
             }
-
-            Preview();
         }
-    }
-
-    void GameOver()
-    {
-        Debug.Log("Game Over!");
     }
 }
-

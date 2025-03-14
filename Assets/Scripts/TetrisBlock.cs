@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using UnityEngine.AI;
 
 public class TetrisBlock : MonoBehaviour
 {
@@ -48,9 +50,7 @@ public class TetrisBlock : MonoBehaviour
             fallTime = 0.8f;
         }
 
-        if (selectedBlockType == BlockType.classicBlock)
-        {
-            // Рух для класичних блоків
+        
             if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
             {
                 transform.position += new Vector3(-1, 0, 0);
@@ -76,68 +76,46 @@ public class TetrisBlock : MonoBehaviour
                 if (!ValidMove())
                 {
                     transform.position -= new Vector3(0, -1, 0);
-                    AddToGrid();
-                    CheckForLines();
-
-                    this.enabled = false;
-                    FindObjectOfType<SpawnerScript>().NewTetromino();
+                    if (selectedBlockType == BlockType.classicBlock)
+                    {
+                        AddToGrid();
+                        CheckForLines();
+                        this.enabled = false;
+                        if (SceneManager.GetActiveScene().name == "main"){
+                            FindObjectOfType<SpawnerScript>().NewTetromino();
+                        }
+                        else if (SceneManager.GetActiveScene().name == "test"){
+                            FindObjectOfType<SpawnerScript>().NewTetromino2();
+                        }
+                    }
+                    else if (selectedBlockType == BlockType.easyBlock)
+                    {
+                        AddToGrid();
+                        CheckForLines();
+                        this.enabled = false;
+                        FindObjectOfType<SpawnerScript>().NewTetromino2();
+                    }
+                    else if (selectedBlockType == BlockType.differenceBlock)
+                    {
+                        CheckForIntersection();
+                    
+                        this.enabled = false;
+                        
+                        FindObjectOfType<SpawnerScript>().NewTetromino2();
+                    }
+                    else if (selectedBlockType == BlockType.negDifferenceBlock)
+                    {
+                        CheckForIntersection();
+                        AddToGrid();
+                        this.enabled = false;
+                        FindObjectOfType<SpawnerScript>().NewTetromino2();
+                    }    
                 }
                 previousTime = Time.time;
             }
-        }
-        else if (selectedBlockType == BlockType.easyBlock)
-        {
-            // Рух для easy block
-            Vector3 previousPosition = transform.position;
-
-            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
-            {
-                transform.position += new Vector3(-1, 0, 0);
-                if (!ValidMove())
-                    transform.position -= new Vector3(-1, 0, 0);
-            }
-            else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
-            {
-                transform.position += new Vector3(1, 0, 0);
-                if (!ValidMove())
-                    transform.position -= new Vector3(1, 0, 0);
-            }
-            else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
-            {
-                transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3(0, 0, 1), 90);
-                if (!ValidMove())
-                    transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3(0, 0, 1), -90);
-            }
-
-            if (Time.time - previousTime > ((Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) ? fallTime / 10 : fallTime))
-            {
-                transform.position += new Vector3(0, -1, 0);
-                if (!ValidMove())
-                {
-                    transform.position -= new Vector3(0, -1, 0);
-                    AddToGrid();
-                    CheckForLines();
-
-                    this.enabled = false;
-                    FindObjectOfType<SpawnerScript>().NewTetromino();
-                }
-                previousTime = Time.time;
-            }
-        }
     }
 
-    bool HitGround()
-    {
-        foreach (Transform child in transform)
-        {
-            int roundedY = Mathf.RoundToInt(child.transform.position.y);
-            if (roundedY <= -1)
-                return true;
-        }
-        return false;
-    }
-
-    void CheckForLines()
+    public void CheckForLines()
     {
         int linesDeleted = 0;
 
@@ -155,6 +133,39 @@ public class TetrisBlock : MonoBehaviour
             FindObjectOfType<ScoreScript>().AddScore(linesDeleted);
         }
     }
+    void CheckForIntersection()
+{
+        foreach (Transform children in transform)
+        {
+            int roundedX = Mathf.RoundToInt(children.transform.position.x);
+            int roundedY = Mathf.RoundToInt(children.transform.position.y);
+
+            if (roundedX >= 0 && roundedX < width && roundedY >= 0 && roundedY < height)
+            {
+                if (selectedBlockType == BlockType.differenceBlock)
+                {
+                    if (grid[roundedX, roundedY] != null)
+                    {
+                        Destroy(gameObject);
+                        Destroy(grid[roundedX, roundedY].gameObject);
+                        grid[roundedX, roundedY] = null;
+                    }
+                    else{
+                        Destroy(gameObject);
+                    }
+                }
+                else if (selectedBlockType == BlockType.negDifferenceBlock) {
+                    if (grid[roundedX, roundedY] != null)
+                    {
+                        Destroy(children.gameObject);
+                        Destroy(grid[roundedX, roundedY].gameObject);
+                        grid[roundedX, roundedY] = null;
+                    } 
+                }
+            }
+        }
+    
+}
 
     bool HasLine(int i)
     {
@@ -175,6 +186,7 @@ public class TetrisBlock : MonoBehaviour
             grid[j, i] = null;
         }
     }
+    
 
     void RowDown(int i)
     {
@@ -191,31 +203,45 @@ public class TetrisBlock : MonoBehaviour
             }
         }
     }
+    
 
     void AddToGrid()
+{
+    foreach (Transform children in transform)
     {
-        foreach (Transform children in transform)
-        {
-            int roundedX = Mathf.RoundToInt(children.transform.position.x);
-            int roundedY = Mathf.RoundToInt(children.transform.position.y);
+        int roundedX = Mathf.RoundToInt(children.transform.position.x);
+        int roundedY = Mathf.RoundToInt(children.transform.position.y);
 
-            if (selectedBlockType == BlockType.classicBlock)
+        if (roundedX < 0 || roundedX >= grid.GetLength(0) || roundedY < 0 || roundedY >= grid.GetLength(1))
+        {
+            Debug.LogWarning("Block is out of grid bounds!");
+            continue;
+        }
+
+        if (selectedBlockType == BlockType.classicBlock)
+        {
+            grid[roundedX, roundedY] = children;
+        }
+        else if (selectedBlockType == BlockType.easyBlock || selectedBlockType == BlockType.differenceBlock)
+        {
+            if (grid[roundedX, roundedY] == null ||
+            grid[roundedX, roundedY].parent.GetComponent<TetrisBlock>().selectedBlockType == BlockType.easyBlock ||
+            grid[roundedX, roundedY].parent.GetComponent<TetrisBlock>().selectedBlockType == BlockType.differenceBlock ||
+            grid[roundedX, roundedY].parent.GetComponent<TetrisBlock>().selectedBlockType == BlockType.negDifferenceBlock)
             {
-                // Для класичних блоків додаємо до сітки
+                if (grid[roundedX, roundedY] != null && grid[roundedX, roundedY].parent.GetComponent<TetrisBlock>().selectedBlockType == BlockType.easyBlock)
+                {
+                    Destroy(grid[roundedX, roundedY].gameObject);
+                }
                 grid[roundedX, roundedY] = children;
             }
-            else if (selectedBlockType == BlockType.easyBlock)
-            {
-                // Для easy block додаємо до сітки, якщо клітинка вільна або вже містить easy block
-                if (grid[roundedX, roundedY] == null || grid[roundedX, roundedY].parent.GetComponent<TetrisBlock>().selectedBlockType == BlockType.easyBlock)
-                {
-                    grid[roundedX, roundedY] = children;
-                }
-            }
-
-            blocktList.Add(grid[roundedX, roundedY]);
         }
+
+        blocktList.Add(grid[roundedX, roundedY]);
     }
+}
+
+    
 
     public bool ValidMove()
     {
@@ -236,7 +262,20 @@ public class TetrisBlock : MonoBehaviour
             }
             else if (selectedBlockType == BlockType.easyBlock && grid[roundedX, roundedY] != null)
             {
-                
+                if (grid[roundedX, roundedY].parent.GetComponent<TetrisBlock>().selectedBlockType == BlockType.classicBlock)
+                {
+                    return false;
+                }
+            }
+            else if (selectedBlockType == BlockType.differenceBlock && grid[roundedX, roundedY] != null)
+            {
+                if (grid[roundedX, roundedY].parent.GetComponent<TetrisBlock>().selectedBlockType == BlockType.classicBlock)
+                {
+                    return false;
+                }
+            }
+             else if (selectedBlockType == BlockType.negDifferenceBlock && grid[roundedX, roundedY] != null)
+            {
                 if (grid[roundedX, roundedY].parent.GetComponent<TetrisBlock>().selectedBlockType == BlockType.classicBlock)
                 {
                     return false;
