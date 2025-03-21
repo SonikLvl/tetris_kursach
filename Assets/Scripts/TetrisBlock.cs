@@ -76,39 +76,36 @@ public class TetrisBlock : MonoBehaviour
                 if (!ValidMove())
                 {
                     transform.position -= new Vector3(0, -1, 0);
+                    FindObjectOfType<SpawnerScript>().isActiveBlock = false;
                     if (selectedBlockType == BlockType.classicBlock)
                     {
                         AddToGrid();
                         CheckForLines();
                         this.enabled = false;
+                        
                         if (SceneManager.GetActiveScene().name == "main"){
                             FindObjectOfType<SpawnerScript>().NewTetromino();
                         }
-                        else if (SceneManager.GetActiveScene().name == "test"){
-                            FindObjectOfType<SpawnerScript>().NewTetromino2();
-                        }
+                        
                     }
                     else if (selectedBlockType == BlockType.easyBlock)
                     {
                         AddToGrid();
                         CheckForLines();
                         this.enabled = false;
-                        FindObjectOfType<SpawnerScript>().NewTetromino2();
+                        
                     }
                     else if (selectedBlockType == BlockType.differenceBlock)
                     {
                         CheckForIntersection();
-                    
                         this.enabled = false;
                         
-                        FindObjectOfType<SpawnerScript>().NewTetromino2();
                     }
                     else if (selectedBlockType == BlockType.negDifferenceBlock)
                     {
                         CheckForIntersection();
                         AddToGrid();
                         this.enabled = false;
-                        FindObjectOfType<SpawnerScript>().NewTetromino2();
                     }    
                 }
                 previousTime = Time.time;

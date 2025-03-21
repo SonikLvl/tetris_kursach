@@ -1,7 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
 
 public class GhostScript : MonoBehaviour
 {
@@ -10,9 +8,11 @@ public class GhostScript : MonoBehaviour
     private static Transform[,] gridGhost = new Transform[width, height];
     private List<Transform> ghostList = new List<Transform>();
 
+    public bool allMatch { get; private set; }
+
     void Start()
     {
-        // Заповнення ghostList
+
         foreach (Transform children in transform)
         {
             int roundedX = Mathf.RoundToInt(children.transform.position.x);
@@ -40,44 +40,49 @@ public class GhostScript : MonoBehaviour
         {
             List<Transform> blocktList = tetrisBlock.blocktList;
 
-            if (blocktList == null || blocktList.Count == 0)
+            if (blocktList != null && blocktList.Count > 0)
             {
-                return;
-            }
 
-            bool allMatch = true;
-            foreach (var block in blocktList)
-            {
-                bool match = false;
-                foreach (var ghost in ghostList)
+                allMatch = true;
+                foreach (var block in blocktList)
                 {
-                    if (Vector3.Distance(block.position, ghost.position) < 0.1f)
+                    if (block == null) 
                     {
-                        match = true;
+                        allMatch = false;
+                        break;
+                    }
+
+                    bool match = false;
+                    foreach (var ghost in ghostList)
+                    {
+                        if (ghost == null) 
+                        {
+                            continue; 
+                        }
+
+                        if (Vector3.Distance(block.position, ghost.position) < 0.1f)
+                        {
+                            match = true;
+                            break;
+                        }
+                    }
+
+                    if (!match)
+                    {
+                        allMatch = false;
                         break;
                     }
                 }
-                if (!match)
+
+                if (allMatch)
                 {
-                    allMatch = false;
-                    break;
+                    Debug.Log("blocktList є підмножиною ghostList (за координатами).");
+                }
+                else
+                {
+                    Debug.Log("blocktList НЕ є підмножиною ghostList.");
                 }
             }
-
-            if (allMatch)
-            {
-                Debug.Log("blocktList є підмножиною ghostList (за координатами).");
-                return;
-            }
-            else
-            {
-                Debug.Log("blocktList НЕ є підмножиною ghostList.");
-                return;
-            }
-        }
-        else
-        {
-            Debug.LogWarning("TetrisBlock не знайдено.");
         }
     }
 }
