@@ -1,16 +1,20 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class SpawnerScript : MonoBehaviour
 {
-    public GameObject[] Tetrominoes; // Масив тетроміно
-    private GameObject PreviewTetromino; // Попередній перегляд наступного тетроміно
-    private GameObject nextTetrominoPrefab; // Наступний тетроміно для спавну
-    private int currentIndex = 0; // Поточний індекс для сцени "test"
+    public List<GameObject> Tetrominoes; 
+    private GameObject PreviewTetromino; 
+    private GameObject nextTetrominoPrefab; 
+    private int currentIndex = 0; 
+    public bool choosen = false;
+    public bool isActiveBlock = false;
+    
 
     void Start()
     {
-        if (Tetrominoes.Length == 0)
+        if (Tetrominoes.Count == 0)
         {
             Debug.LogError("Tetrominoes list is empty!");
             return;
@@ -18,19 +22,51 @@ public class SpawnerScript : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "main")
         {
-            nextTetrominoPrefab = Tetrominoes[Random.Range(0, Tetrominoes.Length)];
+            nextTetrominoPrefab = Tetrominoes[Random.Range(0, Tetrominoes.Count)];
             NewTetromino();
             Preview();
         }
-        else if (SceneManager.GetActiveScene().name == "test")
-        {
-            nextTetrominoPrefab = Tetrominoes[currentIndex];
-            NewTetromino2(); 
-            Preview2(); 
+
+    }
+    void Update()
+    {
+        ChooseBlock();
+        if  (Tetrominoes.Count == 0 && !isActiveBlock){
             
+            GameOver();
         }
     }
 
+    public void ChooseBlock()
+    {
+        if (!choosen)
+        {
+            if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Z))
+            {
+                currentIndex--;
+                if (currentIndex < 0)
+                {
+                    currentIndex = Tetrominoes.Count - 1;
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.X))
+            {
+                currentIndex++;
+                if (currentIndex >= Tetrominoes.Count)
+                {
+                    currentIndex = 0;
+                }
+            }
+            Debug.Log(currentIndex);
+            if (Input.GetKeyDown(KeyCode.Space) && !isActiveBlock){
+                choosen = true;
+                isActiveBlock = true;
+                NewTetromino2();
+            }
+        }
+
+
+    }
 
     public void Preview()
     {
@@ -39,7 +75,7 @@ public class SpawnerScript : MonoBehaviour
             Destroy(PreviewTetromino);
         }
 
-        nextTetrominoPrefab = Tetrominoes[Random.Range(0, Tetrominoes.Length)];
+        nextTetrominoPrefab = Tetrominoes[Random.Range(0, Tetrominoes.Count)];
 
         Vector3 previewPosition = nextTetrominoPrefab.name switch
         {
@@ -59,49 +95,6 @@ public class SpawnerScript : MonoBehaviour
             }
         }
     }
-
-
-    public void Preview2()
-    {
-        if (PreviewTetromino != null)
-        {
-            Destroy(PreviewTetromino);
-        }
-
-        if (currentIndex >= Tetrominoes.Length)
-        {
-            Debug.Log("No more Tetrominoes to preview!");
-            nextTetrominoPrefab = null;
-            return;
-        }
-
-        Debug.Log("Previewing Tetromino with index: " + currentIndex);
-
-        nextTetrominoPrefab = Tetrominoes[currentIndex];
-
-        Vector3 previewPosition = nextTetrominoPrefab.name switch
-        {
-            "Square easyblock" => new Vector3(14.5f, 17, 0),
-            "l easyblock" => new Vector3(15.5f, 16.5f, 0),
-            "L_rotate easyblock" => new Vector3(15, 17, 0),
-            "Square deleteblock" => new Vector3(14.5f, 17, 0),
-            "l deleteblock" => new Vector3(15.5f, 16.5f, 0),
-            "L_rotate deleteblock" => new Vector3(15, 17, 0),
-            "Square crossblock" => new Vector3(14.5f, 17, 0),
-            "l crossblock" => new Vector3(15.5f, 16.5f, 0),
-            "L_rotate crossblock" => new Vector3(15, 17, 0),
-            _ => new Vector3(15, 16, 0),
-        };
-
-        PreviewTetromino = Instantiate(nextTetrominoPrefab, previewPosition, Quaternion.identity);
-
-        foreach (MonoBehaviour script in PreviewTetromino.GetComponents<MonoBehaviour>())
-        {
-            script.enabled = false; 
-        }
-    }
-
-
     public void NewTetromino()
     {
         if (nextTetrominoPrefab == null)
@@ -131,14 +124,13 @@ public class SpawnerScript : MonoBehaviour
  
     public void NewTetromino2()
     {
-        if (currentIndex >= Tetrominoes.Length)
+        if (currentIndex >= Tetrominoes.Count)
         {
             Debug.Log("No more Tetrominoes to spawn in test mode!");
             return;
         }
 
-        nextTetrominoPrefab = Tetrominoes[currentIndex];
-        GameObject newTetromino = Instantiate(nextTetrominoPrefab, transform.position, Quaternion.identity);
+        GameObject newTetromino = Instantiate(Tetrominoes[currentIndex], transform.position, Quaternion.identity);
 
         foreach (MonoBehaviour script in newTetromino.GetComponents<MonoBehaviour>())
         {
@@ -147,19 +139,33 @@ public class SpawnerScript : MonoBehaviour
 
         TetrisBlock tetrisBlock = newTetromino.GetComponent<TetrisBlock>();
 
+        choosen = false;
+
+        Tetrominoes.RemoveAt(currentIndex);
+
+        if (currentIndex >= Tetrominoes.Count)
+        {
+            currentIndex = 0;
+        }
         if (!tetrisBlock.ValidMove())
         {
             GameOver();
             return;
         }
-
-        currentIndex++; 
-        Preview2(); 
     }
 
 
     void GameOver()
     {
-        Debug.Log("Game Over!");
+        if (FindObjectOfType<GhostScript>().allMatch == true){
+            Debug.Log("You won!");
+        }
+        else if (FindObjectOfType<GhostScript>().allMatch == false){
+            Debug.Log("You lose!");
+        }
+        else{
+            Debug.Log("End");
+        }
+        
     }
 }
