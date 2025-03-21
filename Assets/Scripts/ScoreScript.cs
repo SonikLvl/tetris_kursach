@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ScoreScript : MonoBehaviour
 {
-    public Text scoreText;
-    public Text levelText;
+    public TMP_Text scoreText;
+    public TMP_Text levelText;
 
     public int score = 0;
     public int level = 1;
