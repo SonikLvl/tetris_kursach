@@ -7,9 +7,11 @@ public class SpawnerScript : MonoBehaviour
     public List<GameObject> Tetrominoes; 
     private GameObject PreviewTetromino; 
     private GameObject nextTetrominoPrefab; 
-    private int currentIndex = 0; 
+    public int currentIndex = 0; 
     public bool choosen = false;
     public bool isActiveBlock = false;
+
+    
     
 
     void Start()
@@ -30,10 +32,12 @@ public class SpawnerScript : MonoBehaviour
     }
     void Update()
     {
-        ChooseBlock();
-        if  (Tetrominoes.Count == 0 && !isActiveBlock){
-            
-            GameOver();
+        if (SceneManager.GetActiveScene().name != "main"){
+            ChooseBlock();
+            if  (Tetrominoes.Count == 0 && !isActiveBlock){
+                
+                GameOver();
+        }
         }
     }
 
@@ -41,7 +45,7 @@ public class SpawnerScript : MonoBehaviour
     {
         if (!choosen)
         {
-            if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Z) && !isActiveBlock)
             {
                 currentIndex--;
                 if (currentIndex < 0)
@@ -49,7 +53,7 @@ public class SpawnerScript : MonoBehaviour
                     currentIndex = Tetrominoes.Count - 1;
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.X))
+            else if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.X) && !isActiveBlock)
             {
                 currentIndex++;
                 if (currentIndex >= Tetrominoes.Count)
@@ -58,11 +62,7 @@ public class SpawnerScript : MonoBehaviour
                 }
             }
             Debug.Log(currentIndex);
-            if (Input.GetKeyDown(KeyCode.Space) && !isActiveBlock){
-                choosen = true;
-                isActiveBlock = true;
-                NewTetromino2();
-            }
+            
         }
 
 

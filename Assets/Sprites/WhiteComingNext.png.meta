@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 9d5490360823ca2459a5f25c6965446b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6441377013823835929
+    second: WhiteComingNext_0
+  - first:
+      213: -2997721777907486619
+    second: WhiteComingNext_1
+  - first:
+      213: 9158759126597252391
+    second: WhiteComingNext_2
+  - first:
+      213: 708067398361351448
+    second: WhiteComingNext_3
+  - first:
+      213: -5684525686107350577
+    second: WhiteComingNext_4
+  - first:
+      213: 8295690383887669249
+    second: WhiteComingNext_5
+  - first:
+      213: -7227144832152225113
+    second: WhiteComingNext_6
+  - first:
+      213: -2002920110568402210
+    second: WhiteComingNext_7
+  - first:
+      213: -2057063841971792545
+    second: WhiteComingNext_8
+  - first:
+      213: -6320138061932693550
+    second: WhiteComingNext_9
+  - first:
+      213: 5120286872081509715
+    second: WhiteComingNext_10
+  - first:
+      213: -1202246777219256800
+    second: WhiteComingNext_11
+  - first:
+      213: -7426558796513166964
+    second: WhiteComingNext_12
+  - first:
+      213: 4786636227193825871
+    second: WhiteComingNext_13
+  - first:
+      213: 1303685783632547208
+    second: WhiteComingNext_14
+  - first:
+      213: 2874268695852386469
+    second: WhiteComingNext_15
+  - first:
+      213: -5248217553670423876
+    second: WhiteComingNext_16
+  - first:
+      213: -4089535188687901399
+    second: WhiteComingNext_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WhiteComingNext_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1293
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58ebd0c59aa0ad41ae9756118041ac0
+      internalID: -1858542110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteComingNext_1
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1293
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 669a6d62f77d5904f98a1c5a97edbb41
+      internalID: -1884899741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteComingNext_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1132
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71edbd4481f951d499c16ad58c63555c
+      internalID: 787934846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteComingNext_3
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1132
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bbfd0ec9310a0e43b359c8419c525ab
+      internalID: 356825683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteComingNext_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 971
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c7c7f9e3d64eaa439be6e75334840f1
+      internalID: -1882346097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteComingNext_5
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 971
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4133a4ec1b6d143a96d5d001daf2e8
+      internalID: 1152806983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteComingNext_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 810
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe3cf1d14d314da4a9d341952e55dd67
+      internalID: 155639999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteComingNext_7
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 810
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc7a772f1fe14cb4e8a9da46669bdb6f
+      internalID: -1582307438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteComingNext_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 649
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e836ceb32cad5894ab8db79b70be71af
+      internalID: -942057407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteComingNext_9
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 649
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae42be652cbdc9d47927782dc716e6e3
+      internalID: -2015390665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteComingNext_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 488
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa04a71786a8f22449225e604e3d999f
+      internalID: 1758959674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteComingNext_11
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 488
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f00a9bb8336364d94bdfe60b04db34
+      internalID: 202960346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteComingNext_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 327
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c6428963d5ee62489b30970cb30cfb8
+      internalID: 412196144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteComingNext_13
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 327
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe928c1dcd37ce4ba56ed97e278e0e8
+      internalID: 27057950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteComingNext_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 166
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94077550dbc5efe4db87a9d1a5831688
+      internalID: -1226603893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteComingNext_15
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 166
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba0e2aadb8d93b4c87efffc4a9bd296
+      internalID: -393758581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteComingNext_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b37aba499260b40bbbe7a3e266072d
+      internalID: -1385851801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteComingNext_17
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 5
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d379ce1292022444922a396dfdf845a
+      internalID: 472291212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 51868ce59aa26804b9887f5d3dc5203f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      WhiteComingNext_0: -1858542110
+      WhiteComingNext_1: -1884899741
+      WhiteComingNext_10: 1758959674
+      WhiteComingNext_11: 202960346
+      WhiteComingNext_12: 412196144
+      WhiteComingNext_13: 27057950
+      WhiteComingNext_14: -1226603893
+      WhiteComingNext_15: -393758581
+      WhiteComingNext_16: -1385851801
+      WhiteComingNext_17: 472291212
+      WhiteComingNext_2: 787934846
+      WhiteComingNext_3: 356825683
+      WhiteComingNext_4: -1882346097
+      WhiteComingNext_5: 1152806983
+      WhiteComingNext_6: 155639999
+      WhiteComingNext_7: -1582307438
+      WhiteComingNext_8: -942057407
+      WhiteComingNext_9: -2015390665
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

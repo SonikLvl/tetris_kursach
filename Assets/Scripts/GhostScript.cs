@@ -22,14 +22,14 @@ public class GhostScript : MonoBehaviour
             {
                 gridGhost[roundedX, roundedY] = children;
                 ghostList.Add(children);
-                Debug.Log($"Ghost {children.name} має координати: ({roundedX}, {roundedY})");
+                
             }
             else
             {
                 Debug.LogWarning($"Ghost {children.name} має невірні координати: ({roundedX}, {roundedY})");
             }
         }
-        Debug.Log($"Загальна кількість ghost об'єктів: {ghostList.Count}");
+        
     }
 
     void Update()
