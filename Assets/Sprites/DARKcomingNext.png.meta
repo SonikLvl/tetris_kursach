@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 898ca8b95f8e5f44f84e10569565842d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6692025185271370056
+    second: DARKcomingNext_0
+  - first:
+      213: 634652945725440491
+    second: DARKcomingNext_1
+  - first:
+      213: -1366704684973787866
+    second: DARKcomingNext_2
+  - first:
+      213: 6587565554431846314
+    second: DARKcomingNext_3
+  - first:
+      213: -5483432783942695284
+    second: DARKcomingNext_4
+  - first:
+      213: -2096315131912054180
+    second: DARKcomingNext_5
+  - first:
+      213: -2038024673721600812
+    second: DARKcomingNext_6
+  - first:
+      213: -4978512261695763377
+    second: DARKcomingNext_7
+  - first:
+      213: 1228874002398385561
+    second: DARKcomingNext_8
+  - first:
+      213: 2293509200019613802
+    second: DARKcomingNext_9
+  - first:
+      213: 8759280344940746181
+    second: DARKcomingNext_10
+  - first:
+      213: 8851837191771472018
+    second: DARKcomingNext_11
+  - first:
+      213: -2728329766603120535
+    second: DARKcomingNext_12
+  - first:
+      213: -6619534036936924806
+    second: DARKcomingNext_13
+  - first:
+      213: 9053084544561599383
+    second: DARKcomingNext_14
+  - first:
+      213: 5175877507790454893
+    second: DARKcomingNext_15
+  - first:
+      213: -7096267993350697598
+    second: DARKcomingNext_16
+  - first:
+      213: -9170139457987126458
+    second: DARKcomingNext_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DARKcomingNext_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1293
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3303fb6573df5ff4faeea90349edee3c
+      internalID: 1653499607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARKcomingNext_1
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1293
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e39aa859fff41247865e982160034ab
+      internalID: -48824232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARKcomingNext_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1132
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d810cbf6fdea6134e9c3dd2b4455b69d
+      internalID: -2143606108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARKcomingNext_3
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1132
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021320bbe802a3b448d967373c042619
+      internalID: -1660721815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARKcomingNext_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 971
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20282c0b89a95c4488f05701ac79a008
+      internalID: -1913660128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARKcomingNext_5
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 971
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b0ed6fb9fee9ed4285faa819344d355
+      internalID: -643042584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARKcomingNext_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 810
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddcc19d65f34e1a409b5e7d381de0493
+      internalID: -2027444284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARKcomingNext_7
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 810
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0352288496d4ee4397199e2f0780dd0
+      internalID: -1589863526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARKcomingNext_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 649
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7d5cb6afbbac7e4daca1ae1c0155cc5
+      internalID: 1602024241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARKcomingNext_9
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 649
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d40c4331da291499d3ee85979ee6da
+      internalID: 2076322441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARKcomingNext_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 488
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b22c4fa89b86c4da15c3e13a82052a
+      internalID: -291782719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARKcomingNext_11
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 488
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20a3bc8d38c20c147997fc4ca39a143a
+      internalID: -172884592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARKcomingNext_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 327
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6242a7a7fed00b3438037e54ec1de4df
+      internalID: 954604664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARKcomingNext_13
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 327
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13a5893f7ce59f4c9687a5dd04276d2
+      internalID: 1674164007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARKcomingNext_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 166
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 685edda8f74896b4cb48aa7e782c3ea8
+      internalID: -929613878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARKcomingNext_15
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 166
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c911108c1c2f8a2478eb71fd8fab63c1
+      internalID: 677781774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARKcomingNext_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf3f2427e6b6fe46bd45064004fdc9e
+      internalID: -431761643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARKcomingNext_17
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 5
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f850407b915de4186947477e2e9e9d
+      internalID: 1417813738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0ed80cdb227a1374c9e5340bd737bf51
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DARKcomingNext_0: 1653499607
+      DARKcomingNext_1: -48824232
+      DARKcomingNext_10: -291782719
+      DARKcomingNext_11: -172884592
+      DARKcomingNext_12: 954604664
+      DARKcomingNext_13: 1674164007
+      DARKcomingNext_14: -929613878
+      DARKcomingNext_15: 677781774
+      DARKcomingNext_16: -431761643
+      DARKcomingNext_17: 1417813738
+      DARKcomingNext_2: -2143606108
+      DARKcomingNext_3: -1660721815
+      DARKcomingNext_4: -1913660128
+      DARKcomingNext_5: -643042584
+      DARKcomingNext_6: -2027444284
+      DARKcomingNext_7: -1589863526
+      DARKcomingNext_8: 1602024241
+      DARKcomingNext_9: 2076322441
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

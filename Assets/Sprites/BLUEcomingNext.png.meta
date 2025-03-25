@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 5daaa8f8f36291b40b8c476d976e3e58
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4325003885468626804
+    second: BLUEcomingNext_0
+  - first:
+      213: -8468732561748087210
+    second: BLUEcomingNext_1
+  - first:
+      213: 4679440477995148092
+    second: BLUEcomingNext_2
+  - first:
+      213: 657532898266511744
+    second: BLUEcomingNext_3
+  - first:
+      213: -4051338182025121856
+    second: BLUEcomingNext_4
+  - first:
+      213: 4353995138232491554
+    second: BLUEcomingNext_5
+  - first:
+      213: 7194305766422176077
+    second: BLUEcomingNext_6
+  - first:
+      213: 6253281468982897983
+    second: BLUEcomingNext_7
+  - first:
+      213: -7193412604144666552
+    second: BLUEcomingNext_8
+  - first:
+      213: 7195726397947261719
+    second: BLUEcomingNext_9
+  - first:
+      213: -3661640209807280308
+    second: BLUEcomingNext_10
+  - first:
+      213: 3538583682076943650
+    second: BLUEcomingNext_11
+  - first:
+      213: -2615322649143653373
+    second: BLUEcomingNext_12
+  - first:
+      213: -8181368783897496956
+    second: BLUEcomingNext_13
+  - first:
+      213: -5079035173952529306
+    second: BLUEcomingNext_14
+  - first:
+      213: -2873328037607422488
+    second: BLUEcomingNext_15
+  - first:
+      213: -3092097408782516520
+    second: BLUEcomingNext_16
+  - first:
+      213: 3461837292230575429
+    second: BLUEcomingNext_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BLUEcomingNext_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1293
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b35f1e55a72244dbbbaa5bfef61ec7
+      internalID: 1128203326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BLUEcomingNext_1
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1293
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c8b2d7476337647bb0756d7c6d4821
+      internalID: -324639074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BLUEcomingNext_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1132
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b8d0ee56ebd2d489200aa89ac0df44
+      internalID: 2146210477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BLUEcomingNext_3
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1132
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e31381682f24774594c125037ace6fe
+      internalID: 1676300908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BLUEcomingNext_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 971
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b0e874dc609fb46b4b8110df62c8dc
+      internalID: -1109027602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BLUEcomingNext_5
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 971
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72fcf53eddf90b84a880335555224fe8
+      internalID: -221063999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BLUEcomingNext_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 810
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 670df3ceedbcd1f40a24ae55ad44c8d0
+      internalID: -1656816422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BLUEcomingNext_7
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 810
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efecb00daca14594c8e58d99d22966ff
+      internalID: 1766333917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BLUEcomingNext_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 649
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105fc0ee3c7b6284d9c6c7f4003a2edd
+      internalID: -909666833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BLUEcomingNext_9
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 649
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e106964b3f75dc48bcd6cbc07b64825
+      internalID: 874852865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BLUEcomingNext_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 488
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e912fd34fc3c167409b066b7da8fc770
+      internalID: 240641228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BLUEcomingNext_11
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 488
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a079e9e418ac19242b3c3b8209bcbdbf
+      internalID: -814555135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BLUEcomingNext_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 327
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f774df9da7a894dbb7714cb2566dba
+      internalID: 729657526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BLUEcomingNext_13
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 327
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661ab7ed5bb660e44b4579737f582eae
+      internalID: 1385817496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BLUEcomingNext_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 166
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde25bfc9c24f8147801e39b90793c2e
+      internalID: -1166909352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BLUEcomingNext_15
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 166
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb3afc47a213d649a09115192a1b71a
+      internalID: -1283276594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BLUEcomingNext_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8975988cdb2fc2640924436ccd3a653d
+      internalID: -1869455039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BLUEcomingNext_17
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 5
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe25d5ef756d61f4ba0c4c363b87c61c
+      internalID: 143881648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 219f7185d3fba3447924ea2ba2d5b8c3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BLUEcomingNext_0: 1128203326
+      BLUEcomingNext_1: -324639074
+      BLUEcomingNext_10: 240641228
+      BLUEcomingNext_11: -814555135
+      BLUEcomingNext_12: 729657526
+      BLUEcomingNext_13: 1385817496
+      BLUEcomingNext_14: -1166909352
+      BLUEcomingNext_15: -1283276594
+      BLUEcomingNext_16: -1869455039
+      BLUEcomingNext_17: 143881648
+      BLUEcomingNext_2: 2146210477
+      BLUEcomingNext_3: 1676300908
+      BLUEcomingNext_4: -1109027602
+      BLUEcomingNext_5: -221063999
+      BLUEcomingNext_6: -1656816422
+      BLUEcomingNext_7: 1766333917
+      BLUEcomingNext_8: -909666833
+      BLUEcomingNext_9: 874852865
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

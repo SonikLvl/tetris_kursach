@@ -439,13 +439,21 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VisualStudio.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+<<<<<<< HEAD
 -analyzer:"D:/UnityEditirs/6000.0.32f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"D:/UnityEditirs/6000.0.32f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"D:/UnityEditirs/6000.0.32f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
+=======
+-analyzer:"D:/UnityHub/Editor/6000.0.32f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
+-analyzer:"D:/UnityHub/Editor/6000.0.32f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
+-analyzer:"D:/UnityHub/Editor/6000.0.32f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
+"Assets/Scripts/ButtonIndexHolder.cs"
+>>>>>>> main
 "Assets/Scripts/GhostScript.cs"
 "Assets/Scripts/NewSpawnerScript.cs"
 "Assets/Scripts/NewTetrisBlock.cs"
 "Assets/Scripts/ScoreScript.cs"
+"Assets/Scripts/SpawnerListScript.cs"
 "Assets/Scripts/SpawnerScript.cs"
 "Assets/Scripts/TetrisBlock.cs"
 -langversion:9.0

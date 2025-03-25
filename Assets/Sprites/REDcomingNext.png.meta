@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 0460dc8bccf40384881ceed8234ecace
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 407215318141012730
+    second: REDcomingNext_0
+  - first:
+      213: 8056002332857427858
+    second: REDcomingNext_1
+  - first:
+      213: 4284398573761486191
+    second: REDcomingNext_2
+  - first:
+      213: -4275070694610059322
+    second: REDcomingNext_3
+  - first:
+      213: -1577420487478401432
+    second: REDcomingNext_4
+  - first:
+      213: -2593680766837941881
+    second: REDcomingNext_5
+  - first:
+      213: 5715235995120093389
+    second: REDcomingNext_6
+  - first:
+      213: -2754944447439248152
+    second: REDcomingNext_7
+  - first:
+      213: 4498796738079901502
+    second: REDcomingNext_8
+  - first:
+      213: -3875965044028602995
+    second: REDcomingNext_9
+  - first:
+      213: 6526494683396501183
+    second: REDcomingNext_10
+  - first:
+      213: 739899167508823559
+    second: REDcomingNext_11
+  - first:
+      213: -6920662711082478776
+    second: REDcomingNext_12
+  - first:
+      213: -448514227694291816
+    second: REDcomingNext_13
+  - first:
+      213: -9095498756152986121
+    second: REDcomingNext_14
+  - first:
+      213: 8750071413122491056
+    second: REDcomingNext_15
+  - first:
+      213: -8656318404619242190
+    second: REDcomingNext_16
+  - first:
+      213: 1974630873522330280
+    second: REDcomingNext_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: REDcomingNext_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1293
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 554e858dfca051b469cd32a3762c9040
+      internalID: 133535159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REDcomingNext_1
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1293
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96028f7356918194ea14f96ede55a19a
+      internalID: -121867733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REDcomingNext_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1132
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e609fd5ec9fc64fae082d1297277f7
+      internalID: 24431902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REDcomingNext_3
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1132
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61c0697dfa0d7143af1367efeb51517
+      internalID: -405548743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REDcomingNext_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 971
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cbebec7efff20648b3f85a157b81b75
+      internalID: 1790145545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REDcomingNext_5
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 971
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b46842e08a76de46a7c2a9ec80d10e0
+      internalID: 1213461446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REDcomingNext_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 810
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6a76cc717cf42b4cb4a970f86305dc2
+      internalID: -2008997094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REDcomingNext_7
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 810
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d98d9b7c9fe3bb41bef1f540288a0aa
+      internalID: 1956353880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REDcomingNext_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 649
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f757ec5ddb6724f42ba9c59038058d9a
+      internalID: -2001487113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REDcomingNext_9
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 649
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b1b5db088719dd4d98a8fe27785a227
+      internalID: -1960205474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REDcomingNext_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 488
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00131d75f2cc8e3419b63ba102c7b2f9
+      internalID: -1575978262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REDcomingNext_11
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 488
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17394b869f38ec439603fb83ec1f54f
+      internalID: -923675560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REDcomingNext_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 327
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a72a699f7d95a84fb3b3e04c8b45633
+      internalID: -2135832074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REDcomingNext_13
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 327
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd30554fce60b5438729a3a7e0137a8
+      internalID: 318125206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REDcomingNext_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 166
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67048e5e566b49e49ae08a85bd2deeee
+      internalID: 804942245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REDcomingNext_15
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 166
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b06c106de7606499a9f4d0e3453a61
+      internalID: 1432665674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REDcomingNext_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ae9e0a950c68c42bc6f53789c84fee
+      internalID: -1737647676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REDcomingNext_17
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 5
+        width: 163
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5541b7abdc0f0d1478d6ad99688259b3
+      internalID: 1642865641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: fc925e69814239a449ac07f68de0ecf9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      REDcomingNext_0: 133535159
+      REDcomingNext_1: -121867733
+      REDcomingNext_10: -1575978262
+      REDcomingNext_11: -923675560
+      REDcomingNext_12: -2135832074
+      REDcomingNext_13: 318125206
+      REDcomingNext_14: 804942245
+      REDcomingNext_15: 1432665674
+      REDcomingNext_16: -1737647676
+      REDcomingNext_17: 1642865641
+      REDcomingNext_2: 24431902
+      REDcomingNext_3: -405548743
+      REDcomingNext_4: 1790145545
+      REDcomingNext_5: 1213461446
+      REDcomingNext_6: -2008997094
+      REDcomingNext_7: 1956353880
+      REDcomingNext_8: -2001487113
+      REDcomingNext_9: -1960205474
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

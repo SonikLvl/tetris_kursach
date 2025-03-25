@@ -7,9 +7,17 @@ public class SpawnerScript : MonoBehaviour
     public List<GameObject> Tetrominoes; 
     private GameObject PreviewTetromino; 
     private GameObject nextTetrominoPrefab; 
+<<<<<<< HEAD
     private int currentIndex = 0; 
     public bool choosen = false;
     public bool isActiveBlock = false;
+=======
+    public int currentIndex = 0; 
+    public bool choosen = false;
+    public bool isActiveBlock = false;
+
+    
+>>>>>>> main
     
 
     void Start()
@@ -30,10 +38,19 @@ public class SpawnerScript : MonoBehaviour
     }
     void Update()
     {
+<<<<<<< HEAD
         ChooseBlock();
         if  (Tetrominoes.Count == 0 && !isActiveBlock){
             
             GameOver();
+=======
+        if (SceneManager.GetActiveScene().name != "main"){
+            ChooseBlock();
+            if  (Tetrominoes.Count == 0 && !isActiveBlock){
+                
+                GameOver();
+        }
+>>>>>>> main
         }
     }
 
@@ -41,7 +58,11 @@ public class SpawnerScript : MonoBehaviour
     {
         if (!choosen)
         {
+<<<<<<< HEAD
             if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Z))
+=======
+            if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Z) && !isActiveBlock)
+>>>>>>> main
             {
                 currentIndex--;
                 if (currentIndex < 0)
@@ -49,7 +70,11 @@ public class SpawnerScript : MonoBehaviour
                     currentIndex = Tetrominoes.Count - 1;
                 }
             }
+<<<<<<< HEAD
             else if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.X))
+=======
+            else if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.X) && !isActiveBlock)
+>>>>>>> main
             {
                 currentIndex++;
                 if (currentIndex >= Tetrominoes.Count)
@@ -58,11 +83,15 @@ public class SpawnerScript : MonoBehaviour
                 }
             }
             Debug.Log(currentIndex);
+<<<<<<< HEAD
             if (Input.GetKeyDown(KeyCode.Space) && !isActiveBlock){
                 choosen = true;
                 isActiveBlock = true;
                 NewTetromino2();
             }
+=======
+            
+>>>>>>> main
         }
 
 
