@@ -35,6 +35,7 @@ public class TetrisBlock : MonoBehaviour
     void Update()
     {
         Movement();
+
     }
 
     public void Movement()
@@ -83,7 +84,7 @@ public class TetrisBlock : MonoBehaviour
                         CheckForLines();
                         this.enabled = false;
                         
-                        if (SceneManager.GetActiveScene().name == "main"){
+                        if (SceneManager.GetActiveScene().name == "main" && FindObjectOfType<SpawnerScript>().loser == false){
                             FindObjectOfType<SpawnerScript>().NewTetromino();
                         }
                         
@@ -97,14 +98,17 @@ public class TetrisBlock : MonoBehaviour
                     }
                     else if (selectedBlockType == BlockType.differenceBlock)
                     {
+                        
                         CheckForIntersection();
+
                         this.enabled = false;
                         
                     }
                     else if (selectedBlockType == BlockType.negDifferenceBlock)
                     {
+                        
                         CheckForIntersection();
-                        AddToGrid();
+                        Invoke(nameof(AddToGrid), 0.001f);
                         this.enabled = false;
                     }    
                 }
@@ -143,6 +147,7 @@ public class TetrisBlock : MonoBehaviour
                 {
                     if (grid[roundedX, roundedY] != null)
                     {
+                        
                         Destroy(gameObject);
                         Destroy(grid[roundedX, roundedY].gameObject);
                         grid[roundedX, roundedY] = null;
@@ -157,6 +162,8 @@ public class TetrisBlock : MonoBehaviour
                         Destroy(children.gameObject);
                         Destroy(grid[roundedX, roundedY].gameObject);
                         grid[roundedX, roundedY] = null;
+                        
+                        
                     } 
                 }
             }
@@ -219,14 +226,13 @@ public class TetrisBlock : MonoBehaviour
         {
             grid[roundedX, roundedY] = children;
         }
-        else if (selectedBlockType == BlockType.easyBlock || selectedBlockType == BlockType.differenceBlock)
+        else if (selectedBlockType == BlockType.easyBlock || selectedBlockType == BlockType.negDifferenceBlock || selectedBlockType == BlockType.differenceBlock)
         {
             if (grid[roundedX, roundedY] == null ||
             grid[roundedX, roundedY].parent.GetComponent<TetrisBlock>().selectedBlockType == BlockType.easyBlock ||
-            grid[roundedX, roundedY].parent.GetComponent<TetrisBlock>().selectedBlockType == BlockType.differenceBlock ||
             grid[roundedX, roundedY].parent.GetComponent<TetrisBlock>().selectedBlockType == BlockType.negDifferenceBlock)
             {
-                if (grid[roundedX, roundedY] != null && grid[roundedX, roundedY].parent.GetComponent<TetrisBlock>().selectedBlockType == BlockType.easyBlock)
+                if (grid[roundedX, roundedY] != null && (grid[roundedX, roundedY].parent.GetComponent<TetrisBlock>().selectedBlockType == BlockType.easyBlock || grid[roundedX, roundedY].parent.GetComponent<TetrisBlock>().selectedBlockType == BlockType.negDifferenceBlock))
                 {
                     Destroy(grid[roundedX, roundedY].gameObject);
                 }
@@ -234,7 +240,10 @@ public class TetrisBlock : MonoBehaviour
             }
         }
 
-        blocktList.Add(grid[roundedX, roundedY]);
+        blocktList.Add(children);
+
+        
+        
     }
 }
 
@@ -281,5 +290,26 @@ public class TetrisBlock : MonoBehaviour
         }
 
         return true;
+    }
+
+    void check(){
+        for (int i = 0; i < blocktList.Count; i++)
+    {
+        if (blocktList[i] != null)
+        {
+            TetrisBlock block = blocktList[i].parent.GetComponent<TetrisBlock>();
+            string typeInfo = block != null ? $"| Type: {block.selectedBlockType}" : "";
+            
+            Debug.Log($"Block #{i}: {blocktList[i].name} " + 
+                     $"| World: ({blocktList[i].position.x:F1}, {blocktList[i].position.y:F1}) " +
+                     $"| Grid: ({Mathf.RoundToInt(blocktList[i].position.x)}, " +
+                     $"{Mathf.RoundToInt(blocktList[i].position.y)}) {typeInfo}");
+        }
+        else
+        {
+            Debug.Log($"Block #{i}: NULL (destroyed)");
+        }
+    }
+
     }
 }

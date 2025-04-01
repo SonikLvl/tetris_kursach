@@ -34,6 +34,10 @@ public class GhostScript : MonoBehaviour
 
     void Update()
     {
+        Checking();
+    }
+
+    public void Checking(){
         TetrisBlock tetrisBlock = FindObjectOfType<TetrisBlock>();
 
         if (tetrisBlock != null)

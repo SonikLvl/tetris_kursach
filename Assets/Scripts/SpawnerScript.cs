@@ -10,6 +10,7 @@ public class SpawnerScript : MonoBehaviour
     public int currentIndex = 0; 
     public bool choosen = false;
     public bool isActiveBlock = false;
+    public bool loser = false;
 
     
     
@@ -64,6 +65,7 @@ public class SpawnerScript : MonoBehaviour
             Debug.Log(currentIndex);
             
         }
+        //Спавн переїхав у SpawnerList
 
 
     }
@@ -150,22 +152,31 @@ public class SpawnerScript : MonoBehaviour
         if (!tetrisBlock.ValidMove())
         {
             GameOver();
+
             return;
         }
     }
 
-
-    void GameOver()
+        public void GameOver()
     {
-        if (FindObjectOfType<GhostScript>().allMatch == true){
-            Debug.Log("You won!");
-        }
-        else if (FindObjectOfType<GhostScript>().allMatch == false){
-            Debug.Log("You lose!");
+    
+            if (SceneManager.GetActiveScene().name != "main"){
+            if (FindObjectOfType<GhostScript>().allMatch == true){
+                Debug.Log("You won!");
+            }
+            else if (FindObjectOfType<GhostScript>().allMatch == false){
+                Debug.Log("You lose!");
+            }
         }
         else{
+            loser = true;
             Debug.Log("End");
+            
         }
         
+        
+        
     }
+    
+    
 }
