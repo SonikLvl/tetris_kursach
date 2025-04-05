@@ -12,6 +12,7 @@ public class SpawnerScript : MonoBehaviour
     public bool isActiveBlock = false;
     public bool loser = false;
 
+
     
     
 
@@ -37,7 +38,7 @@ public class SpawnerScript : MonoBehaviour
             ChooseBlock();
             if  (Tetrominoes.Count == 0 && !isActiveBlock){
                 
-                GameOver();
+                Invoke(nameof(GameOver), 0.001f);
         }
         }
     }
@@ -160,13 +161,18 @@ public class SpawnerScript : MonoBehaviour
         public void GameOver()
     {
     
-            if (SceneManager.GetActiveScene().name != "main"){
+        if (SceneManager.GetActiveScene().name != "main"){
             if (FindObjectOfType<GhostScript>().allMatch == true){
                 Debug.Log("You won!");
+                FindObjectOfType<GameManager>().CompleteCurrentLevel();
+                return;
             }
             else if (FindObjectOfType<GhostScript>().allMatch == false){
                 Debug.Log("You lose!");
+                return;
             }
+
+            
         }
         else{
             loser = true;

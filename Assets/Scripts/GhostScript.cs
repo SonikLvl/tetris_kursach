@@ -22,6 +22,7 @@ public class GhostScript : MonoBehaviour
             {
                 gridGhost[roundedX, roundedY] = children;
                 ghostList.Add(children);
+                Debug.Log(ghostList.Count);
                 
             }
             else
