@@ -12,6 +12,8 @@ public class SpawnerScript : MonoBehaviour
     public bool isActiveBlock = false;
     public bool loser = false;
 
+   
+
 
     
     
@@ -162,14 +164,24 @@ public class SpawnerScript : MonoBehaviour
     {
     
         if (SceneManager.GetActiveScene().name != "main"){
+
+            List<GameObject> FinalList = FindObjectOfType<GameManager>().final;
+
             if (FindObjectOfType<GhostScript>().allMatch == true){
-                Debug.Log("You won!");
-                FindObjectOfType<GameManager>().CompleteCurrentLevel();
+                FinalList[0].SetActive(true);
+                if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0)){
+                    FindObjectOfType<GameManager>().CompleteCurrentLevel();
+                }
                 return;
             }
             else if (FindObjectOfType<GhostScript>().allMatch == false){
-                Debug.Log("You lose!");
+
+                FinalList[1].SetActive(true);
                 return;
+            }
+            else{
+                FinalList[0].SetActive(false);
+                FinalList[1].SetActive(false);
             }
 
             

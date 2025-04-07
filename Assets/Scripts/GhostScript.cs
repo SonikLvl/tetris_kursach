@@ -22,7 +22,7 @@ public class GhostScript : MonoBehaviour
             {
                 gridGhost[roundedX, roundedY] = children;
                 ghostList.Add(children);
-                Debug.Log(ghostList.Count);
+                
                 
             }
             else
@@ -30,63 +30,75 @@ public class GhostScript : MonoBehaviour
                 Debug.LogWarning($"Ghost {children.name} має невірні координати: ({roundedX}, {roundedY})");
             }
         }
+        Debug.Log(ghostList.Count);
         
     }
 
     void Update()
     {
-        Checking();
+
     }
 
-    public void Checking(){
-        TetrisBlock tetrisBlock = FindObjectOfType<TetrisBlock>();
+    public void Checking() {
 
-        if (tetrisBlock != null)
-        {
-            List<Transform> blocktList = tetrisBlock.blocktList;
+        List<Transform> blocktList = TetrisBlock.blocktList;
 
-            if (blocktList != null && blocktList.Count > 0)
-            {
+        if (blocktList != null && blocktList.Count > 0) {
+            bool allBlocksMatchGhosts = true;
+            foreach (var block in blocktList) {
+                if (block == null) {
+                    allBlocksMatchGhosts = false;
+                    break;
+                }
 
-                allMatch = true;
-                foreach (var block in blocktList)
-                {
-                    if (block == null) 
-                    {
-                        allMatch = false;
-                        break;
-                    }
+                bool match = false;
+                foreach (var ghost in ghostList) {
+                    if (ghost == null) continue;
 
-                    bool match = false;
-                    foreach (var ghost in ghostList)
-                    {
-                        if (ghost == null) 
-                        {
-                            continue; 
-                        }
-
-                        if (Vector3.Distance(block.position, ghost.position) < 0.1f)
-                        {
-                            match = true;
-                            break;
-                        }
-                    }
-
-                    if (!match)
-                    {
-                        allMatch = false;
+                    if (Vector3.Distance(block.position, ghost.position) < 0.1f) {
+                        match = true;
                         break;
                     }
                 }
 
-                if (allMatch)
-                {
-                    Debug.Log("blocktList є підмножиною ghostList (за координатами).");
+                if (!match) {
+                    allBlocksMatchGhosts = false;
+                    break;
                 }
-                else
-                {
-                    Debug.Log("blocktList НЕ є підмножиною ghostList.");
+            }
+
+            // 2. Перевіряємо, чи всі елементи ghostList перекриваються blocktList
+            bool allGhostsCoveredByBlocks = true;
+            foreach (var ghost in ghostList) {
+                if (ghost == null) continue;
+
+                bool covered = false;
+                foreach (var block in blocktList) {
+                    if (block == null) continue;
+
+                    if (Vector3.Distance(ghost.position, block.position) < 0.1f) {
+                        covered = true;
+                        break;
+                    }
                 }
+
+                if (!covered) {
+                    allGhostsCoveredByBlocks = false;
+                    break;
+                }
+            }
+
+            // Фінальний результат:
+            allMatch = allBlocksMatchGhosts && allGhostsCoveredByBlocks;
+
+            if (allMatch) {
+                Debug.Log("blocktList і ghostList повністю збігаються (двостороння перевірка).");
+            } else if (allBlocksMatchGhosts) {
+                Debug.Log("blocktList є підмножиною ghostList, але не всі ghost перекриті.");
+            } else if (allGhostsCoveredByBlocks) {
+                Debug.Log("ghostList є підмножиною blocktList, але не всі блоки збігаються.");
+            } else {
+                Debug.Log("Немає повного збігу між blocktList і ghostList.");
             }
         }
     }

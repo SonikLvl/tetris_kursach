@@ -1,10 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
+    public List<GameObject> final = new List<GameObject>();
+     
     void Start()
     {
+
         LoadCurrentLevel();
     }
 
@@ -39,6 +43,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
+            TetrisBlock.blocktList.Clear();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
@@ -47,6 +52,7 @@ public class GameManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
+            TetrisBlock.blocktList.Clear();
             SceneManager.LoadScene("menu");
         }
     }
@@ -54,17 +60,18 @@ public class GameManager : MonoBehaviour
 
     public void CompleteCurrentLevel()
     {
-            string currentLevelStr = PlayerPrefs.GetString("LevelToActivate", "1");
-            if (!int.TryParse(currentLevelStr, out int currentLevel)) 
+        TetrisBlock.blocktList.Clear();
+        string currentLevelStr = PlayerPrefs.GetString("LevelToActivate", "1");
+        if (!int.TryParse(currentLevelStr, out int currentLevel)) 
             {
                 currentLevel = 1;
             }
-            int nextLevel = currentLevel + 1;
-            PlayerPrefs.SetString("LevelToActivate", nextLevel.ToString());
-            PlayerPrefs.Save();
+        int nextLevel = currentLevel + 1;
+        PlayerPrefs.SetString("LevelToActivate", nextLevel.ToString());
+        PlayerPrefs.Save();
 
 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         
     }
 }
