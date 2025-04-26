@@ -4,19 +4,38 @@ using UnityEngine.UI;
 
 public class NavigatorScript : MonoBehaviour
 {
+    public AudioSource buttonAudio; 
+    private bool isButtonClicked = false; 
 
+    public void EndlessMode()
+    {
+        if (isButtonClicked) return;
+        
+        isButtonClicked = true;
+        buttonAudio.Play();
+        Invoke(nameof(LoadEndlessMode), buttonAudio.clip.length);
+    }
 
-    public void EndlessMode (){
+    public void Levels(Button button)
+    {
+        if (isButtonClicked) return;
+        
+        isButtonClicked = true;
+        buttonAudio.Play();
+        
+        PlayerPrefs.SetString("LevelToActivate", button.name);
+        PlayerPrefs.Save();
+        
+        Invoke(nameof(LoadLevelsScene), buttonAudio.clip.length);
+    }
+
+    private void LoadEndlessMode()
+    {
         SceneManager.LoadScene("main");
     }
 
-    public void Levels(Button button){
-        
-
-        PlayerPrefs.SetString("LevelToActivate", button.name);
-        PlayerPrefs.Save();
-
+    private void LoadLevelsScene()
+    {
         SceneManager.LoadScene("test");
-        
     }
 }

@@ -1,15 +1,27 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
     public List<GameObject> final = new List<GameObject>();
+
+    public AudioSource restartSound;
+    public AudioSource exitSound;
      
     void Start()
     {
-
+        GameObject restartSoundObject = GameObject.Find("RestartSound");
+        if (restartSoundObject != null){
+            restartSound = restartSoundObject.GetComponent<AudioSource>();
+        }
+        GameObject exitSoundObject = GameObject.Find("ExitSound");
+        if (exitSoundObject != null){
+            exitSound = exitSoundObject.GetComponent<AudioSource>();
+        }
         LoadCurrentLevel();
+        
     }
 
     void Update()
@@ -39,13 +51,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ResetScene()
+   public void ResetScene()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
             TetrisBlock.blocktList.Clear();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            if (SceneManager.GetActiveScene().name == "main"){
+                int scoreNum = FindObjectOfType<ScoreScript>().score; 
+                FindObjectOfType<SaveToJson>().SaveToJSON(scoreNum);
+            }
+            restartSound.Play();
+            Invoke(nameof(Reset),restartSound.clip.length - 0.6f);
         }
+    }
+
+    public void Reset()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Quit()
@@ -53,8 +75,16 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             TetrisBlock.blocktList.Clear();
-            SceneManager.LoadScene("menu");
+            exitSound.Play();
+            Invoke(nameof(QuitScene),exitSound.clip.length);
+            if (SceneManager.GetActiveScene().name == "main"){
+                int scoreNum = FindObjectOfType<ScoreScript>().score; 
+                FindObjectOfType<SaveToJson>().SaveToJSON(scoreNum);
+            }
         }
+    }
+    public void QuitScene(){
+        SceneManager.LoadScene("menu");
     }
 
 

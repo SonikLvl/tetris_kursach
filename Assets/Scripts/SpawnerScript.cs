@@ -12,6 +12,12 @@ public class SpawnerScript : MonoBehaviour
     public bool isActiveBlock = false;
     public bool loser = false;
 
+    public AudioSource loseSound;
+    public AudioSource winSound;
+    public AudioSource choosingSound;
+
+    
+
    
 
 
@@ -20,11 +26,6 @@ public class SpawnerScript : MonoBehaviour
 
     void Start()
     {
-        if (Tetrominoes.Count == 0)
-        {
-            Debug.LogError("Tetrominoes list is empty!");
-            return;
-        }
 
         if (SceneManager.GetActiveScene().name == "main")
         {
@@ -32,16 +33,29 @@ public class SpawnerScript : MonoBehaviour
             NewTetromino();
             Preview();
         }
+        GameObject loseSoundObject = GameObject.Find("LoseSound");
+        if (loseSoundObject != null){
+            loseSound = loseSoundObject.GetComponent<AudioSource>();
+        }
+        GameObject winSoundObject = GameObject.Find("WinSound");
+        if (winSoundObject != null){
+            winSound = winSoundObject.GetComponent<AudioSource>();
+        }
+        GameObject choosingSoundObject = GameObject.Find("ChoosingSound");
+        if (choosingSoundObject != null){
+            choosingSound = choosingSoundObject.GetComponent<AudioSource>();
+        }
 
     }
+    
+
     void Update()
     {
         if (SceneManager.GetActiveScene().name != "main"){
             ChooseBlock();
-            if  (Tetrominoes.Count == 0 && !isActiveBlock){
-                
-                Invoke(nameof(GameOver), 0.001f);
-        }
+            if (Tetrominoes.Count == 0 && !isActiveBlock){
+                Invoke(nameof(GameOver), 0.001f); 
+            }
         }
     }
 
@@ -51,6 +65,9 @@ public class SpawnerScript : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Z) && !isActiveBlock)
             {
+                if(Tetrominoes.Count > 1){
+                    choosingSound.Play();
+                }
                 currentIndex--;
                 if (currentIndex < 0)
                 {
@@ -59,6 +76,9 @@ public class SpawnerScript : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.X) && !isActiveBlock)
             {
+                if(Tetrominoes.Count > 1){
+                    choosingSound.Play();
+                }
                 currentIndex++;
                 if (currentIndex >= Tetrominoes.Count)
                 {
@@ -159,25 +179,32 @@ public class SpawnerScript : MonoBehaviour
             return;
         }
     }
-
-        public void GameOver()
+    private int num = 1;
+    public void GameOver()
     {
     
         if (SceneManager.GetActiveScene().name != "main"){
 
             List<GameObject> FinalList = FindObjectOfType<GameManager>().final;
-
+            
             if (FindObjectOfType<GhostScript>().allMatch == true){
+                if(num == 1){
+                    winSound.Play();
+                    num = num-1;
+                }
                 FinalList[0].SetActive(true);
                 if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0)){
                     FindObjectOfType<GameManager>().CompleteCurrentLevel();
                 }
-                return;
+
             }
             else if (FindObjectOfType<GhostScript>().allMatch == false){
-
+                if(num == 1){
+                    loseSound.Play();
+                    num = num-1;
+                }
                 FinalList[1].SetActive(true);
-                return;
+
             }
             else{
                 FinalList[0].SetActive(false);
@@ -187,13 +214,14 @@ public class SpawnerScript : MonoBehaviour
             
         }
         else{
+            loseSound.Play();
             loser = true;
+            int scoreNum = FindObjectOfType<ScoreScript>().score; 
+            FindObjectOfType<SaveToJson>().SaveToJSON(scoreNum);
             Debug.Log("End");
             
         }
-        
-        
-        
+           
     }
     
     

@@ -14,6 +14,10 @@ public class TetrisBlock : MonoBehaviour
 
     public static List<Transform> blocktList = new List<Transform>();
 
+    public AudioSource stuckSound; 
+    public AudioSource deleteSound;
+    public AudioSource rotateSound;
+
     public enum BlockType
     {
         classicBlock,
@@ -28,7 +32,18 @@ public class TetrisBlock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Ініціалізація (якщо потрібно)
+        GameObject stuckSoundObject = GameObject.Find("StuckSound");
+        if (stuckSoundObject != null){
+            stuckSound = stuckSoundObject.GetComponent<AudioSource>();
+        }
+        GameObject deleteSoundObject = GameObject.Find("DeleteSound");
+        if (deleteSoundObject != null){
+            deleteSound = deleteSoundObject.GetComponent<AudioSource>();
+        }
+        GameObject rotateSoundObject = GameObject.Find("RotateSound");
+        if (rotateSoundObject != null){
+            rotateSound = rotateSoundObject.GetComponent<AudioSource>();
+        }
     }
 
     // Update is called once per frame
@@ -67,6 +82,7 @@ public class TetrisBlock : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
             {
                 transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3(0, 0, 1), 90);
+                rotateSound.Play();
                 if (!ValidMove())
                     transform.RotateAround(transform.TransformPoint(rotationPoint), new Vector3(0, 0, 1), -90);
             }
@@ -76,11 +92,14 @@ public class TetrisBlock : MonoBehaviour
                 transform.position += new Vector3(0, -1, 0);
                 if (!ValidMove())
                 {
+                    stuckSound.Play();
                     transform.position -= new Vector3(0, -1, 0);
                     FindObjectOfType<SpawnerScript>().isActiveBlock = false;
+
                     GhostScript ghostScript = FindObjectOfType<GhostScript>();
                     if (selectedBlockType == BlockType.classicBlock)
                     {
+                        
                         AddToGrid();
                         CheckForLines();
                         this.enabled = false;
@@ -201,6 +220,7 @@ public class TetrisBlock : MonoBehaviour
 
     void DeleteLine(int i)
     {
+        deleteSound.Play();
         for (int j = 0; j < width; j++)
         {
             Destroy(grid[j, i].gameObject);

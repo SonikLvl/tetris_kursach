@@ -11,6 +11,14 @@ public class ScoreScript : MonoBehaviour
     public int level = 1;
     public int linesCleared = 0;
 
+    public AudioSource levelUpSound;
+
+    void Start(){
+        GameObject levelUpObject = GameObject.Find("LevelUpSound");
+        if (levelUpObject != null){
+            levelUpSound = levelUpObject.GetComponent<AudioSource>();
+        }
+    }
 
 
     private int[] pointsPerLine = { 0, 40, 100, 300, 1200 }; 
@@ -21,13 +29,12 @@ public class ScoreScript : MonoBehaviour
         {
             score += pointsPerLine[lines] * level;
             linesCleared += lines;
-            
-            
             scoreText.text = score.ToString("0");
 
             if (linesCleared >= level * 10)
             {
                 level++;
+                levelUpSound.Play();
                 if (levelText != null)
                 {
                     levelText.text = level.ToString("0");
