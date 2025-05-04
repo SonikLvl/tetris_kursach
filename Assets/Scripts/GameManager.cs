@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> final = new List<GameObject>();
 
     public AudioSource restartSound;
-    public AudioSource exitSound;
+    
      
     void Start()
     {
@@ -16,10 +16,7 @@ public class GameManager : MonoBehaviour
         if (restartSoundObject != null){
             restartSound = restartSoundObject.GetComponent<AudioSource>();
         }
-        GameObject exitSoundObject = GameObject.Find("ExitSound");
-        if (exitSoundObject != null){
-            exitSound = exitSoundObject.GetComponent<AudioSource>();
-        }
+        
         LoadCurrentLevel();
         
     }
@@ -32,12 +29,11 @@ public class GameManager : MonoBehaviour
 
     private void LoadCurrentLevel()
     {
-        string levelToActivate = PlayerPrefs.GetString("LevelToActivate", "1"); // Значення за замовчуванням "1"
+        string levelToActivate = PlayerPrefs.GetString("LevelToActivate", "1"); 
         
         GameObject levelsHolder = GameObject.Find("Levels");
         if (levelsHolder == null) return;
 
-        // Вимкнути всі рівні спочатку
         foreach (Transform child in levelsHolder.transform)
         {
             child.gameObject.SetActive(false);
@@ -75,8 +71,7 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             TetrisBlock.blocktList.Clear();
-            exitSound.Play();
-            Invoke(nameof(QuitScene),exitSound.clip.length);
+            QuitScene();
             if (SceneManager.GetActiveScene().name == "main"){
                 int scoreNum = FindObjectOfType<ScoreScript>().score; 
                 FindObjectOfType<SaveToJson>().SaveToJSON(scoreNum);
