@@ -49,7 +49,14 @@ public class TetrisBlock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement();
+        if (StopGameManager.IsGamePausedGlobally)
+    {
+        return; 
+    }
+            Movement(); 
+        
+    
+        
         
     }
 

@@ -51,12 +51,18 @@ public class SpawnerScript : MonoBehaviour
 
     void Update()
     {
+        if (StopGameManager.IsGamePausedGlobally)
+    {
+        return; 
+    }
+        
         if (SceneManager.GetActiveScene().name != "main"){
             ChooseBlock();
             if (Tetrominoes.Count == 0 && !isActiveBlock){
                 Invoke(nameof(GameOver), 0.001f); 
             }
         }
+        
     }
 
     public void ChooseBlock()
@@ -217,7 +223,7 @@ public class SpawnerScript : MonoBehaviour
             loseSound.Play();
             loser = true;
             int scoreNum = FindObjectOfType<ScoreScript>().score; 
-            FindObjectOfType<SaveToJson>().SaveToJSON(scoreNum);
+            FindObjectOfType<SaveToJson>().SendScoreToDatabase(scoreNum);
             Debug.Log("End");
             
         }

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
-using System.Collections;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -23,8 +23,13 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        ResetScene();
-        Quit();
+    if (StopGameManager.IsGamePausedGlobally)
+    {
+        return; 
+    }
+            ResetScene();
+            Quit();
+        
     }
 
     private void LoadCurrentLevel()
@@ -54,7 +59,7 @@ public class GameManager : MonoBehaviour
             TetrisBlock.blocktList.Clear();
             if (SceneManager.GetActiveScene().name == "main"){
                 int scoreNum = FindObjectOfType<ScoreScript>().score; 
-                FindObjectOfType<SaveToJson>().SaveToJSON(scoreNum);
+                FindObjectOfType<SaveToJson>().SendScoreToDatabase(scoreNum);
             }
             restartSound.Play();
             Invoke(nameof(Reset),restartSound.clip.length - 0.6f);
@@ -74,7 +79,7 @@ public class GameManager : MonoBehaviour
             QuitScene();
             if (SceneManager.GetActiveScene().name == "main"){
                 int scoreNum = FindObjectOfType<ScoreScript>().score; 
-                FindObjectOfType<SaveToJson>().SaveToJSON(scoreNum);
+                FindObjectOfType<SaveToJson>().SendScoreToDatabase(scoreNum);
             }
         }
     }
@@ -99,4 +104,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         
     }
+
+    
+
 }

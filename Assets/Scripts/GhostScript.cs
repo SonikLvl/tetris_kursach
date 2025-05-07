@@ -34,10 +34,7 @@ public class GhostScript : MonoBehaviour
         
     }
 
-    void Update()
-    {
-
-    }
+    
 
     public void Checking() {
 

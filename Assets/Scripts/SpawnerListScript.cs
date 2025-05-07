@@ -56,8 +56,12 @@ public class ButtonGridGenerator : MonoBehaviour
 
     void Update()
     {
-
+        if (StopGameManager.IsGamePausedGlobally)
+    {
+        return; 
+    }
         SelectButton();
+        
     }
 
     public void GenerateButtons()
