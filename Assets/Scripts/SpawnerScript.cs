@@ -1,3 +1,4 @@
+//Скрипт для реалізації спавну блоків для обох рівнів
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
@@ -15,14 +16,6 @@ public class SpawnerScript : MonoBehaviour
     public AudioSource loseSound;
     public AudioSource winSound;
     public AudioSource choosingSound;
-
-    
-
-   
-
-
-    
-    
 
     void Start()
     {

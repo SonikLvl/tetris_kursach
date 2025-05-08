@@ -1,3 +1,5 @@
+//Скрипт для навігації за допомогою кнопок 
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,12 +9,6 @@ public class NavigatorScript : MonoBehaviour
     public AudioSource buttonAudio; 
     private bool isButtonClicked = false; 
 
-
-
-    private void Start()
-    {
-        
-    }
 
     public void EndlessMode()
     {

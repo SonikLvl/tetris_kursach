@@ -1,3 +1,5 @@
+//Скрипт для навігаціх по сценам гри і між рівнями
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;

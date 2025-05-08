@@ -1,3 +1,5 @@
+//Скрипт для відображення підказок для нового режиму
+
 using UnityEngine;
 using UnityEngine.EventSystems;
 

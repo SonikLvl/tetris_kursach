@@ -1,3 +1,5 @@
+//Скрипт для створення іконок для відображення списку допустимих блоків для нового режиму
+
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

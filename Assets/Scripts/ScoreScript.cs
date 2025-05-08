@@ -1,5 +1,6 @@
+//Скрипт для підрахунку і відображення рахунку для безкінечного режиму
+
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class ScoreScript : MonoBehaviour

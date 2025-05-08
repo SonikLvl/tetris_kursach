@@ -1,3 +1,4 @@
+//Клас для зміни фокусу на сайті
 using UnityEngine;
 using UnityEngine.Scripting;
 using UnityEngine.EventSystems;

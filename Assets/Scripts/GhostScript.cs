@@ -1,3 +1,5 @@
+//Скрипт для реалізації механіки силуету для нового режиму
+
 using UnityEngine;
 using System.Collections.Generic;
 

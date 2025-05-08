@@ -1,3 +1,5 @@
+//Додатковий скрипт для збереження індексу і спрайту іконок для нового режиму
+
 using UnityEngine;
 
 public class ButtonIndexHolder : MonoBehaviour

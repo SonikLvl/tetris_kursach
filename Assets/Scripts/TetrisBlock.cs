@@ -1,3 +1,6 @@
+//Основний скрипт із реалізацією основних гри: рух тетроміно і реалізація механік для нового режиму
+
+
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;

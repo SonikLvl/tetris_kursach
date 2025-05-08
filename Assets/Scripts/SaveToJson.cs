@@ -1,3 +1,5 @@
+//Скрипт для збереження і відправки рахунку на сайт
+
 using UnityEngine;
 using System.Runtime.InteropServices;
 
